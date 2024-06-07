@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.LoginPage;
 import Pages.PracticePage;
 import Pages.SidebarPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -14,6 +15,8 @@ public class BaseTest {
     public WebDriverWait wait;
     public SidebarPage sidebarPage;
     public PracticePage practicePage;
+    public LoginPage loginPage;
+
 
     @BeforeClass
 
@@ -22,6 +25,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         sidebarPage = new SidebarPage(driver);
         practicePage = new PracticePage(driver);
+        loginPage = new LoginPage(driver);
 
 
     }
